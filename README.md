@@ -1,3 +1,3 @@
-# note
-DNA Language Model
-https://academic.oup.com/bib/article/25/2/bbae085/7628548?login=true
+# Note
+# DNA Language Model
+Brief Bioinform,[metaProbiotics: a tool for mining probiotic from metagenomic binning data based on a language model](https://academic.oup.com/bib/article/25/2/bbae085/7628548?login=true)
