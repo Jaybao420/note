@@ -23,7 +23,7 @@
 - [L1000 Bulk 药物反应数据](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92742)
 # CellWhisperer
 ## 预训练数据
-1. [GEO 通过 ARCHS4 统一重算的 bulk](https://medical-epigenomics.org/papers/schaefer2025cellwhisperer/data/datasets/archs4_geo/)
+1. [GEO 通过 ARCHS4 统一重算的 bulk](https://medical-epigenomics.org/papers/schaefer2025cellwhisperer/data/datasets/archs4_geo/)：从 GEO（经 ARCHS4 重处理）取了 705,430 个 human RNA-seq 样本（主要是 bulk，也包括一些已做 pseudo-bulk 的数据）。每个样本是一条基因表达向量+一段自然语言文本说明。
 2. [CELLxGENE Census：scRNA→pseudo-bulk + 文本](https://medical-epigenomics.org/papers/schaefer2025cellwhisperer/data/datasets/cellxgene_census/)：使用 CZ CELLxGENE Census 汇总的人类 scRNA-seq 数据，把同一 cell type/组织 / 条件 的细胞先 聚合成 pseudo-bulk（减少噪音，也方便和 bulk 数据统一），最终得到 376,983 条 pseudo-bulk 转录组，同样配上自然语言描述。
 ## 评估数据集
 1. 细胞类型 / 组织 / 疾病 zero-shot 预测
