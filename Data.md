@@ -9,7 +9,7 @@
 - 单细胞 PBMC 数据：组合干扰素/细胞因子刺激 PBMC 数据（[Causal identification of single-cell experimental perturbation effects with CINEMA-OT](https://doi.org/10.5061/dryad.4xgxd25g1)）
 - L1000：大规模 bulk 转录组，不是单细胞；每个样本是某个细胞系在不同药物、剂量、时间点处理下的基因表达签名。在c2s中测试模型在药物/基因扰动签名上的理解能力（[L1000 bulk RNA data](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70138&utm_source=chatgpt.com)）
 - GTEx：经典的人体多组织 bulk RNA-seq 图谱，几十种组织、上千个样本。在c2s中用于测试C2S在bulk数据上做组织分类/表型预测的能力([GTEx](https://www.gtexportal.org/home/datasets?utm_source=chatgpt.com))
-# C2S-SCALE
+# C2S-Scale
 ## 预训练数据
 使用来自[CellxGene](https://cellxgene.cziscience.com/)和[Human Cell Atlas (HCA)](https://www.humancellatlas.org/)的800多个公共scRNA-seq 数据集，总共超过 5700 万个细胞（人 + 小鼠）
 ## 微调数据
@@ -25,7 +25,7 @@
 ## 预训练数据
 1. [GEO 通过 ARCHS4 统一重算的 bulk](https://medical-epigenomics.org/papers/schaefer2025cellwhisperer/data/datasets/archs4_geo/)
 2. [CELLxGENE Census：scRNA→pseudo-bulk + 文本](https://medical-epigenomics.org/papers/schaefer2025cellwhisperer/data/datasets/cellxgene_census/)：使用 CZ CELLxGENE Census 汇总的人类 scRNA-seq 数据，把同一 cell type/组织 / 条件 的细胞先 聚合成 pseudo-bulk（减少噪音，也方便和 bulk 数据统一），最终得到 376,983 条 pseudo-bulk 转录组，同样配上自然语言描述。
-## 评估 / 下游分析用的数据集
+## 评估数据集
 1. 细胞类型 / 组织 / 疾病 zero-shot 预测
 - [人类多器官单细胞图谱：](https://medical-epigenomics.org/papers/schaefer2025cellwhisperer/data/datasets/tabula_sapiens/)48 万个细胞，24 个器官，详细 cell type 注释。
 - [ImmGen 人类免疫细胞 bulk RNA-seq：](https://medical-epigenomics.org/papers/schaefer2025cellwhisperer/data/datasets/immgen/)42 条 bulk 转录组，5 类免疫细胞，人工注释很好。
@@ -35,3 +35,9 @@
 - [人胰腺scRNA meta-analysis数据集：](https://medical-epigenomics.org/papers/schaefer2025cellwhisperer/data/datasets/pancreas/)从多个研究中整合而来，含16,382个单细胞表达谱，cell type很相近、batch effect 比较重，是一个难的integration benchmark，用来评估 CellWhisperer embedding 在数据整合、batch 校正中的表现。
 - [人胚胎发育 scRNA-seq（Human Development dataset）：](https://medical-epigenomics.org/papers/schaefer2025cellwhisperer/data/datasets/development/)作者从6篇文献中整理 95,092 个胚胎期单细胞，3–38天post-fertilization。
 # LangCell
+## 预训练数据
+[scLibrary](https://huggingface.co/datasets/Toycat/scLibrary)：约 2750 万条 细胞-文本配对，全部来自 CELLxGENE 数据库，只选 人类（human），只保留 10x Genomics 测序协议的 scRNA-seq 数据
+## 评估数据集
+1. [外周血 PBMC 数据](https://www.10xgenomics.com/datasets/10-k-peripheral-blood-mononuclear-cells-pbm-cs-from-a-healthy-donor-single-indexed-3-1-standard-4-0-0?utm_source=chatgpt.com)
+2. [人脑数据集](https://cellxgene.cziscience.com/collections/283d65eb-dd53-496d-adb7-7570c7caa443?utm_source=chatgpt.com)
+3. [多组织数据集](https://figshare.com/articles/dataset/Tabula_Sapiens_release_1_0/14267219?utm_source=chatgpt.com)
