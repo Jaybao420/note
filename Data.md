@@ -48,6 +48,25 @@
 # CellWhisperer
 ## 预训练数据
 1. [GEO 通过 ARCHS4 统一重算的 bulk](https://medical-epigenomics.org/papers/schaefer2025cellwhisperer/data/datasets/archs4_geo/)：从 GEO（经 ARCHS4 重处理）取了 705,430 个 human RNA-seq 样本（主要是 bulk，也包括一些已做 pseudo-bulk 的数据）。每个样本是一条基因表达向量+一段自然语言文本说明。
+| experiment | geo_id     | accession | sample_type | sample_type_confidence | mapped_ontology_ids                               | mapped_ontology_terms                             | real_value_property_ids | real_value_property_terms | sra_uid | biosample_uid | biosample_title                    | raw_biosample_metadata                            | organism          | biosample    | database | accession_type | sample    | study     | bioproject  | geo_metadata                         |
+| ---------- | ---------- | --------- | ----------- | ---------------------: | ------------------------------------------------- | ------------------------------------------------- | ----------------------- | ------------------------- | ------: | ------------: | ---------------------------------- | ------------------------------------------------- | ----------------- | ------------ | -------- | -------------- | --------- | --------- | ----------- | ------------------------------------ |
+| SRX185895  | GSM1000981 | SRS362050 | cell_line   |                    1.0 | EFO:0005952, EFO:0007352, CVCL:1879, EFO:00059... | non-Hodgkins lymphoma, lymphatic system diseas... | NaN                     | NaN                       |  243394 |       1163911 | OCI-LY1_48hrs_mRNAseq_3x_siNT_R1   | source_name: Human DLBCL cel line; treatment: ... | Homo sapiens;9606 | SAMN01163911 | sra      | experiment     | SRS362050 | SRP007525 | PRJNA138597 | treatment: siNT,cell line: OCI-LY1   |
+| SRX185896  | GSM1000982 | SRS362051 | cell_line   |                    1.0 | EFO:0005952, EFO:0007352, CVCL:1879, EFO:00059... | non-Hodgkins lymphoma, lymphatic system diseas... | NaN                     | NaN                       |  243395 |       1163912 | OCI-LY1_48hrs_mRNAseq_3x_siNT_R2   | source_name: Human DLBCL cel line; treatment: ... | Homo sapiens;9606 | SAMN01163912 | sra      | experiment     | SRS362051 | SRP007525 | PRJNA138597 | treatment: siNT,cell line: OCI-LY1   |
+| SRX185897  | GSM1000983 | SRS362052 | cell_line   |                    1.0 | EFO:0005952, EFO:0007352, CVCL:1879, EFO:00059... | non-Hodgkins lymphoma, lymphatic system diseas... | NaN                     | NaN                       |  243396 |       1163913 | OCI-LY1_48hrs_mRNAseq_3x_siNT_R3   | source_name: Human DLBCL cel line; treatment: ... | Homo sapiens;9606 | SAMN01163913 | sra      | experiment     | SRS362052 | SRP007525 | PRJNA138597 | treatment: siNT,cell line: OCI-LY1   |
+| SRX185898  | GSM1000984 | SRS362053 | cell_line   |                    1.0 | EFO:0005952, EFO:0007352, CVCL:1879, EFO:00059... | non-Hodgkins lymphoma, lymphatic system diseas... | NaN                     | NaN                       |  243397 |       1163914 | OCI-LY1_48hrs_mRNAseq_3x_siBCL6_R1 | source_name: Human DLBCL cel line; treatment: ... | Homo sapiens;9606 | SAMN01163914 | sra      | experiment     | SRS362053 | SRP007525 | PRJNA138597 | treatment: siBCL6,cell line: OCI-LY1 |
+| SRX185899  | GSM1000985 | SRS362054 | cell_line   |                    1.0 | EFO:0005952, EFO:0007352, CVCL:1879, EFO:00059... | non-Hodgkins lymphoma, lymphatic system diseas... | NaN                     | NaN                       |  243398 |       1163915 | OCI-LY1_48hrs_mRNAseq_3x_siBCL6_R2 | source_name: Human DLBCL cel line; treatment: ... | Homo sapiens;9606 | SAMN01163915 | sra      | experiment     | SRS362054 | SRP007525 | PRJNA138597 | treatment: siBCL6,cell line: OCI-LY1 |
+
+| var_index (ensembl_gene_id) | biotype        | gene_name |
+| --------------------------- | -------------- | --------- |
+| ENSG00000000003             | protein_coding | TSPAN6    |
+| ENSG00000000005             | protein_coding | TNMD      |
+| ENSG00000000419             | protein_coding | DPM1      |
+| ENSG00000000457             | protein_coding | SCYL3     |
+| ENSG00000000460             | protein_coding | C1orf112  |
+| ENSG00000000938             | protein_coding | FGR       |
+| ENSG00000000971             | protein_coding | CFH       |
+| ENSG00000001036             | protein_coding | FUCA2     |
+
 2. [CELLxGENE Census：scRNA→pseudo-bulk + 文本](https://medical-epigenomics.org/papers/schaefer2025cellwhisperer/data/datasets/cellxgene_census/)：使用 CZ CELLxGENE Census 汇总的人类 scRNA-seq 数据，把同一 cell type/组织 / 条件 的细胞先 聚合成 pseudo-bulk（减少噪音，也方便和 bulk 数据统一），最终得到 376,983 条 pseudo-bulk 转录组，同样配上自然语言描述。
 ## 评估数据集
 1. 细胞类型 / 组织 / 疾病 zero-shot 预测
