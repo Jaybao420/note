@@ -8,6 +8,7 @@
 | Pan_T7935490_AAACGGGTCTTGCATT | CD8-positive, alpha-beta memory T cell | ileum  | A29             | Homo sapiens | 10x 5' v1 | female |
 | Pan_T7935490_AAAGCAATCATCGCTC | CD8-positive, alpha-beta memory T cell | ileum  | A29             | Homo sapiens | 10x 5' v1 | female |
 | Pan_T7935490_AAAGTAGCAGTCACTA | gamma-delta T cell                     | ileum  | A29             | Homo sapiens | 10x 5' v1 | female |
+
 | var_id       | gene_name   | ensembl_id      |
 | ------------ | ----------- | --------------- |
 | MIR1302-2HG  | MIR1302-2HG | ENSG00000243485 |
@@ -18,6 +19,7 @@
 | RP11-34P13-2 | RP11-34P13  | ENSG00000239906 |
 | RP11-34P13-3 | RP11-34P13  | ENSG00000241860 |
 | RP11-34P13-4 | RP11-34P13  | ENSG00000241599 |
+
 | 项                 | 值                                          |
 | ----------------- | ------------------------------------------ |
 | 类型                | `anndata._core.sparse_dataset._CSRDataset` |
