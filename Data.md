@@ -71,6 +71,32 @@
 | ENSG00000001036             | protein_coding | FUCA2     |
 
 2. [CELLxGENE Census：scRNA→pseudo-bulk + 文本](https://medical-epigenomics.org/papers/schaefer2025cellwhisperer/data/datasets/cellxgene_census/)：使用 CZ CELLxGENE Census 汇总的人类 scRNA-seq 数据，把同一 cell type/组织 / 条件 的细胞先 聚合成 pseudo-bulk（减少噪音，也方便和 bulk 数据统一），最终得到 376,983 条 pseudo-bulk 转录组，同样配上自然语言描述。
+| cell_id                                       | age     | assay    | assay_ontology_term_id | cell_type            | cell_type_ontology_term_id | cluster_name    |
+| --------------------------------------------- | ------- | -------- | ---------------------- | -------------------- | -------------------------- | --------------- |
+| census_82f6af6d-5313-439a-9936-5e844be49a70_0 | 240 day | Drop-seq | EFO:0008722            | glutamatergic neuron | CL:0000679                 | EN1_L2-3_DCC    |
+| census_82f6af6d-5313-439a-9936-5e844be49a70_1 | 240 day | Drop-seq | EFO:0008722            | glutamatergic neuron | CL:0000679                 | EN1_L2-3_DCC    |
+| census_82f6af6d-5313-439a-9936-5e844be49a70_2 | 240 day | Drop-seq | EFO:0008722            | glutamatergic neuron | CL:0000679                 | EN1_L2-3_DCC    |
+| census_82f6af6d-5313-439a-9936-5e844be49a70_3 | 240 day | Drop-seq | EFO:0008722            | glutamatergic neuron | CL:0000679                 | EN1_L2-3_DCC    |
+| census_82f6af6d-5313-439a-9936-5e844be49a70_4 | 240 day | Drop-seq | EFO:0008722            | glutamatergic neuron | CL:0000679                 | EN1_L5-6_CLSTN2 |
+
+| var_index (ensembl_gene_id) | ensembl_id      | gene_name |
+| --------------------------- | --------------- | --------- |
+| ENSG00000000003             | ENSG00000000003 | TSPAN6    |
+| ENSG00000000005             | ENSG00000000005 | TNMD      |
+| ENSG00000000419             | ENSG00000000419 | DPM1      |
+| ENSG00000000457             | ENSG00000000457 | SCYL3     |
+| ENSG00000000460             | ENSG00000000460 | C1orf112  |
+| ENSG00000000938             | ENSG00000000938 | FGR       |
+| ENSG00000000971             | ENSG00000000971 | CFH       |
+| ENSG00000001036             | ENSG00000001036 | FUCA2     |
+
+| cell_id                                       | ENSG00000000003 | ENSG00000000005 | ENSG00000000419 | ENSG00000000457 | ENSG00000000460 |
+| --------------------------------------------- | --------------: | --------------: | --------------: | --------------: | --------------: |
+| census_82f6af6d-5313-439a-9936-5e844be49a70_0 |               0 |               0 |               0 |               0 |               0 |
+| census_82f6af6d-5313-439a-9936-5e844be49a70_1 |               0 |               0 |               0 |               0 |               0 |
+| census_82f6af6d-5313-439a-9936-5e844be49a70_2 |               0 |               0 |               0 |               0 |               0 |
+| census_82f6af6d-5313-439a-9936-5e844be49a70_3 |               0 |               0 |               0 |               0 |               0 |
+| census_82f6af6d-5313-439a-9936-5e844be49a70_4 |               0 |               0 |               0 |               0 |               0 |
 ## 评估数据集
 1. 细胞类型 / 组织 / 疾病 zero-shot 预测
 - [人类多器官单细胞图谱：](https://medical-epigenomics.org/papers/schaefer2025cellwhisperer/data/datasets/tabula_sapiens/)48 万个细胞，24 个器官，详细 cell type 注释。
