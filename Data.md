@@ -1,7 +1,39 @@
 # C2S
 ## 预训练数据
 人类免疫系统的跨组织单细胞图谱：该图谱包含大概 36 万个免疫细胞，来自 12 个供体、16 个不同组织（血液、淋巴结、骨髓、肠道、肺、肝脏等），每个细胞都有 scRNA-seq 表达矩阵和经过 CellTypist 注释的精细免疫细胞类型标签（[Cross-tissue immune cell analysis reveals tissue-specific features in humans](https://www.tissueimmunecellatlas.org/)）
-![Uploading image.png…]()
+obs.columns (前 30): ['cell_type', 'tissue', 'batch_condition', 'organism', 'assay', 'sex']
+var.columns: ['gene_name', 'ensembl_id']
+
+================================================================================
+obs 前 5 行（最多显示前 20 列）：
+                                                            cell_type tissue  \
+Pan_T7935490_AAACCTGCAAATTGCC              CD4-positive helper T cell  ileum   
+Pan_T7935490_AAACGGGCATCTGGTA  CD8-positive, alpha-beta memory T cell  ileum   
+Pan_T7935490_AAACGGGTCTTGCATT  CD8-positive, alpha-beta memory T cell  ileum   
+Pan_T7935490_AAAGCAATCATCGCTC  CD8-positive, alpha-beta memory T cell  ileum   
+Pan_T7935490_AAAGTAGCAGTCACTA                      gamma-delta T cell  ileum   
+
+                              batch_condition      organism      assay     sex  
+Pan_T7935490_AAACCTGCAAATTGCC             A29  Homo sapiens  10x 5' v1  female  
+Pan_T7935490_AAACGGGCATCTGGTA             A29  Homo sapiens  10x 5' v1  female  
+Pan_T7935490_AAACGGGTCTTGCATT             A29  Homo sapiens  10x 5' v1  female  
+Pan_T7935490_AAAGCAATCATCGCTC             A29  Homo sapiens  10x 5' v1  female  
+Pan_T7935490_AAAGTAGCAGTCACTA             A29  Homo sapiens  10x 5' v1  female  
+
+================================================================================
+var 前 8 行（最多显示前 20 列）：
+                gene_name       ensembl_id
+MIR1302-2HG   MIR1302-2HG  ENSG00000243485
+FAM138A           FAM138A  ENSG00000237613
+OR4F5               OR4F5  ENSG00000186092
+RP11-34P13     RP11-34P13  ENSG00000238009
+RP11-34P13-1   RP11-34P13  ENSG00000239945
+RP11-34P13-2   RP11-34P13  ENSG00000239906
+RP11-34P13-3   RP11-34P13  ENSG00000241860
+RP11-34P13-4   RP11-34P13  ENSG00000241599
+
+adata.X 类型: <class 'anndata._core.sparse_dataset._CSRDataset'>
+adata.X shape: (29773, 36503)
 
 ## 微调数据
 - 免疫组织：[Cross-tissue immune cell analysis reveals tissue-specific features in humans](https://www.tissueimmunecellatlas.org/)
