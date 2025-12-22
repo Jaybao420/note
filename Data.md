@@ -48,8 +48,6 @@
 # CellWhisperer
 ## 预训练数据
 1. [GEO 通过 ARCHS4 统一重算的 bulk](https://medical-epigenomics.org/papers/schaefer2025cellwhisperer/data/datasets/archs4_geo/)：从 GEO（经 ARCHS4 重处理）取了 705,430 个 human RNA-seq 样本（主要是 bulk，也包括一些已做 pseudo-bulk 的数据）。每个样本是一条基因表达向量+一段自然语言文本说明。
-obs.columns (前 30): ['geo_id', 'accession', 'sample_type', 'sample_type_confidence', 'mapped_ontology_ids', 'mapped_ontology_terms', 'real_value_property_ids', 'real_value_property_terms', 'sra_uid', 'biosample_uid', 'biosample_title', 'raw_biosample_metadata', 'organism', 'biosample', 'database', 'accession_type', 'sample', 'study', 'bioproject', 'geo_metadata', 'molecule_ch1', 'readsaligned', 'relation', 'series_id', 'singlecellprobability', 'geo_source_name', 'geo_title', 'treatment', 'treatment_protocol', 'growth_protocol']
-var.columns: ['biotype', 'gene_name']
 | obs_index (experiment) | geo_id     | accession | sample_type | organism          | study     | bioproject  | geo_metadata                          |
 | ---------- | ---------- | --------- | ----------- | ----------------- | --------- | ----------- | ------------------------------------- |
 | SRX185895  | GSM1000981 | SRS362050 | cell_line   | Homo sapiens;9606 | SRP007525 | PRJNA138597 | treatment: siNT, cell line: OCI-LY1   |
