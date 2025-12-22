@@ -48,10 +48,11 @@
 # CellWhisperer
 ## 预训练数据
 1. [GEO 通过 ARCHS4 统一重算的 bulk](https://medical-epigenomics.org/papers/schaefer2025cellwhisperer/data/datasets/archs4_geo/)：从 GEO（经 ARCHS4 重处理）取了 705,430 个 human RNA-seq 样本（主要是 bulk，也包括一些已做 pseudo-bulk 的数据）。每个样本是一条基因表达向量+一段自然语言文本说明。
-| obs_index (experiment) | geo_id     | accession | sample_type | sample_type_confidence | mapped_ontology_ids                               |
+
+| obs_index (experiment) | geo_id     | accession | sample_type | sample_type_confidence | mapped_ontology_ids                   |
 | ---------- | ---------- | --------- | ----------- | ---------------------: | ------------------------------------------------- |
 | SRX185895  | GSM1000981 | SRS362050 | cell_line   |                    1.0 | EFO:0005952, EFO:0007352, CVCL:1879, EFO:00059... |
-| SRX185896  | GSM1000982 | SRS362051 | cell_line   |                    1.0 | EFO:0005952, EFO:0007352, CVCL:1879, EFO:00059... |
+| SRX185896  | GSM1000982 | SRS362051 | cell_line   |                    1.0 | EFO:0005952, EFO:0007352, CVCL:1879, EFO:00059... | 
 | SRX185897  | GSM1000983 | SRS362052 | cell_line   |                    1.0 | EFO:0005952, EFO:0007352, CVCL:1879, EFO:00059... |
 | SRX185898  | GSM1000984 | SRS362053 | cell_line   |                    1.0 | EFO:0005952, EFO:0007352, CVCL:1879, EFO:00059... |
 | SRX185899  | GSM1000985 | SRS362054 | cell_line   |                    1.0 | EFO:0005952, EFO:0007352, CVCL:1879, EFO:00059... |
