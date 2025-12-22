@@ -71,6 +71,7 @@
 | ENSG00000001036             | protein_coding | FUCA2     |
 
 2. [CELLxGENE Census：scRNA→pseudo-bulk + 文本](https://medical-epigenomics.org/papers/schaefer2025cellwhisperer/data/datasets/cellxgene_census/)：使用 CZ CELLxGENE Census 汇总的人类 scRNA-seq 数据，把同一 cell type/组织 / 条件 的细胞先 聚合成 pseudo-bulk（减少噪音，也方便和 bulk 数据统一），最终得到 376,983 条 pseudo-bulk 转录组，同样配上自然语言描述。
+
 | cell_id                                       | age     | assay    | assay_ontology_term_id | cell_type            | cell_type_ontology_term_id | 
 | --------------------------------------------- | ------- | -------- | ---------------------- | -------------------- | -------------------------- | 
 | census_82f6af6d-5313-439a-9936-5e844be49a70_0 | 240 day | Drop-seq | EFO:0008722            | glutamatergic neuron | CL:0000679                 | 
