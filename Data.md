@@ -48,6 +48,51 @@
 # CellWhisperer
 ## 预训练数据
 1. [GEO 通过 ARCHS4 统一重算的 bulk](https://medical-epigenomics.org/papers/schaefer2025cellwhisperer/data/datasets/archs4_geo/)：从 GEO（经 ARCHS4 重处理）取了 705,430 个 human RNA-seq 样本（主要是 bulk，也包括一些已做 pseudo-bulk 的数据）。每个样本是一条基因表达向量+一段自然语言文本说明。
+## obs (adata.obs.columns)
+
+- `geo_id`
+- `accession`
+- `sample_type`
+- `sample_type_confidence`
+- `mapped_ontology_ids`
+- `mapped_ontology_terms`
+- `real_value_property_ids`
+- `real_value_property_terms`
+- `sra_uid`
+- `biosample_uid`
+- `biosample_title`
+- `raw_biosample_metadata`
+- `organism`
+- `biosample`
+- `database`
+- `accession_type`
+- `sample`
+- `study`
+- `bioproject`
+- `geo_metadata`
+- `molecule_ch1`
+- `readsaligned`
+- `relation`
+- `series_id`
+- `singlecellprobability`
+- `geo_source_name`
+- `geo_title`
+- `treatment`
+- `treatment_protocol`
+- `growth_protocol`
+- `series_submission_date`
+- `series_summary`
+- `series_design`
+- `natural_language_annotation`
+- `transcriptome_weights`
+- `annotation_weights`
+
+## var (adata.var.columns)
+
+- `biotype`
+- `gene_name`
+
+obsm: 'natural_language_annotation_replicates'
 
 | obs_index (experiment) | geo_id     | accession | sample_type | sample_type_confidence | mapped_ontology_ids                   |
 | ---------- | ---------- | --------- | ----------- | ---------------------: | ------------------------------------------------- |
@@ -91,13 +136,6 @@
 | ENSG00000000971             | ENSG00000000971 | CFH       |
 | ENSG00000001036             | ENSG00000001036 | FUCA2     |
 
-| cell_id                                       | ENSG00000000003 | ENSG00000000005 | ENSG00000000419 | ENSG00000000457 | ENSG00000000460 |
-| --------------------------------------------- | --------------: | --------------: | --------------: | --------------: | --------------: |
-| census_82f6af6d-5313-439a-9936-5e844be49a70_0 |               0 |               0 |               0 |               0 |               0 |
-| census_82f6af6d-5313-439a-9936-5e844be49a70_1 |               0 |               0 |               0 |               0 |               0 |
-| census_82f6af6d-5313-439a-9936-5e844be49a70_2 |               0 |               0 |               0 |               0 |               0 |
-| census_82f6af6d-5313-439a-9936-5e844be49a70_3 |               0 |               0 |               0 |               0 |               0 |
-| census_82f6af6d-5313-439a-9936-5e844be49a70_4 |               0 |               0 |               0 |               0 |               0 |
 ## 评估数据集
 1. 细胞类型 / 组织 / 疾病 zero-shot 预测
 - [人类多器官单细胞图谱：](https://medical-epigenomics.org/papers/schaefer2025cellwhisperer/data/datasets/tabula_sapiens/)48 万个细胞，24 个器官，详细 cell type 注释。
