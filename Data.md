@@ -1,6 +1,20 @@
 # C2S
 ## 预训练数据
 人类免疫系统的跨组织单细胞图谱：该图谱包含大概 36 万个免疫细胞，来自 12 个供体、16 个不同组织（血液、淋巴结、骨髓、肠道、肺、肝脏等），每个细胞都有 scRNA-seq 表达矩阵和经过 CellTypist 注释的精细免疫细胞类型标签（[Cross-tissue immune cell analysis reveals tissue-specific features in humans](https://www.tissueimmunecellatlas.org/)）
+## obs (adata.obs.columns)
+
+- `cell_type`
+- `tissue`
+- `batch_condition`
+- `organism`
+- `assay`
+- `sex`
+
+## var (adata.var.columns)
+
+- `gene_name`
+- `ensembl_id`
+
 | cell_id                       | cell_type                              | tissue | batch_condition | organism     | assay     | sex    |
 | ----------------------------- | -------------------------------------- | ------ | --------------- | ------------ | --------- | ------ |
 | Pan_T7935490_AAACCTGCAAATTGCC | CD4-positive helper T cell             | ileum  | A29             | Homo sapiens | 10x 5' v1 | female |
