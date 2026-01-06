@@ -9,4 +9,5 @@
 | 虚拟筛选 | 泛癌图谱数据集 | 包含12种癌症类型的364个肿瘤样本的 bulk RNA-seq 数据，作为“免疫背景阳性”上下文。 |
 | 虚拟筛选 | WAGA 细胞系数据 (GSE130346) | 默克尔细胞癌的单细胞数据，作为“免疫背景中性”上下文。 |
 | 集群描述 & 数据集解释 | 30个 scRNA-seq 数据集 | 从公共资源中选取，经过聚类和差异表达分析，用于训练和评估模型生成集群描述和数据集摘要的能力。 |
-| 问答 | 约80篇 scRNA-seq 研究论文 | 从这些论文的摘要、结果和讨论部分生成约1600个问答对，用于训练模型的问答能力。 |
+| 细胞注释 | [GEO](https://medical-epigenomics.org/papers/schaefer2025cellwhisperer/data/datasets/archs4_geo/) | 每个样本是一条基因表达向量+一段自然语言文本说明 |
+| 细胞注释 | [cellxgene]([https://medical-epigenomics.org/papers/schaefer2025cellwhisperer/data/datasets/cellxgene_census/]) | 每个样本是一条基因表达向量+一段自然语言文本说明 |
