@@ -1,6 +1,8 @@
 | 任务类别       | 数据集 | 描述 | 实例 |
 |----------|----------|------|---|
-| 疾病类型预测 | [人类疾病数据集](https://medical-epigenomics.org/papers/schaefer2025cellwhisperer/data/datasets/human_disease/) | 14112条，229种疾病类型 | {"role": "system", "content": "You are a single-cell disease-state prediction assistant. You will be given one cell's gene expression profile. Your job is to predict the most likely disease for this cell."}, {"role": "user", "content": "Please predict the cell's disease. Cell: <startofcell> cell_4 <endofcell>"}, {"role": "assistant", "content": "OK, the disease is Healthy"} |
+| 疾病类型预测 | [人类疾病数据集](https://medical-epigenomics.org/papers/schaefer2025cellwhisperer/data/datasets/human_disease/) | 14112条，229种疾病类型 | {"role": "system", "content": "You are a single-cell disease-state prediction assistant. You will be given one cell's gene expression profile. Your job is to predict the most likely disease for this cell."}, 
+{"role": "user", "content": "Please predict the cell's disease. Cell: <startofcell> cell_4 <endofcell>"}, 
+{"role": "assistant", "content": "OK, the disease is Healthy"} |
 | 细胞类型预测 | [多组织免疫细胞数据集](https://www.tissueimmunecellatlas.org/) | 329762条，分布于全身16种人体组织的免疫细胞数据集 | <img width="200" height="100" alt="image" src="https://github.com/user-attachments/assets/f6cc8f5a-7d10-4768-9c5c-70d44887b8b5" /> |
 |                | [肺组织数据集](https://cellxgene.cziscience.com/collections/e9cf4e8d-05ed-4d95-b550-af35ca219390) | 15806条，人类肺组织呼吸道上皮细胞数据集 | <img width="200" height="100" alt="image" src="https://github.com/user-attachments/assets/7c9306b7-d624-4235-9c44-dfc9c224de53" /> |
 |                | [Tabula Sapiens 数据集](https://medical-epigenomics.org/papers/schaefer2025cellwhisperer/data/datasets/tabula_sapiens/) | 483152条，177种细胞类型 | ![Uploading image.png…]() |
