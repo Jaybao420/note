@@ -24,7 +24,7 @@
 - 650 million parameters
 - 40 days across 24 A100 80 GB GPUs
 ## 预训练策略
-- 1. 从真实表达基因中遮蔽一部分gene
+1. 从真实表达基因中遮蔽一部分gene
 2. 仅用剩余表达基因构建cell sentence和CLS embedding
 3. 从遮蔽基因中取正样本gene
 4. 从零表达基因中取等量负样本gene
