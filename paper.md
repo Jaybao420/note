@@ -25,21 +25,9 @@
 - 40 days across 24 A100 80 GB GPUs
 ## 预训练策略
 - 1. 从真实表达基因中遮蔽一部分gene
-= 2. 仅用剩余表达基因构建cell sentence和CLS embedding
-3. 从遮蔽基因中取正样本 G
-i
-L+
-	​
-
-4. 从零表达基因中取等量负样本 G
-i
-L−
-	​
-
+2. 仅用剩余表达基因构建cell sentence和CLS embedding
+3. 从遮蔽基因中取正样本gene
+4. 从零表达基因中取等量负样本gene
 5. 结合cell embedding与gene protein embedding
 6. 预测候选gene是否表达，并使用二元交叉熵训练
-	​
-
-	​
-
 ## 下游任务
