@@ -11,7 +11,7 @@
 - ESM2：在不同物种中，同一个基因的名字和编码可能千差万别，但它们翻译出来的蛋白质氨基酸序列在演化上却是高度保守和相似的。UCE 引入了 150 亿参数的蛋白质大模型 ESM2。对于任意物种的基因，UCE 直接读取其对应的蛋白质序列，并用 ESM2 将其转化为高维的蛋白质向量。这样，人类和鸡的同源基因，在向量空间中就会自动靠拢归位。ESM2 成了跨物种基因对齐的“天然翻译官”。当一个从未见过的全新物种（如未参与训练的绿猴或裸鼹鼠）数据输入时：在 UCE 已经构建好的 3,600 万细胞的通用空间里，这个新物种的细胞虽然基因名字是陌生的，但其“蛋白质语义向量组合”与人类或小鼠的同类细胞高度同构。无需任何模型微调，新细胞就能直接精准投影到对应的生物学聚类中。它的基因先被翻译成蛋白质，经 ESM2 转化为通用向量。再通过“RNA袋”机制，根据表达量抽样打包，输入 UCE 架构。
 - 将属于同一染色体的基因置于特殊标记之间，然后按基因组位置进行排序，从而将它们组合在一起。CLS标记代表整个细胞的特殊标记。（染色体内部有序，但染色体之间随机排列）
 ### 模型架构
-- 
+- IMA data（33.9 million cells and 285 datasets）are human and mouse data.The remainder of the IMA is composed of 2.3 million cells from 28 datasets, from eight different species: human, mouse, zebrafish, rhesus macaque, crab-eating macaque, mouse lemur, frog and pig.
 ### 模型输入层
 - gene representation：gene→一个或多个蛋白序列→ESM2蛋白向量→多个蛋白向量取平均→该gene的固定embedding。传统gene embedding只对预定义词表中的gene有效。解决：1、训练时没出现的新gene没有已学习的向量。而ESM2读取的是氨基酸序列，因此，即使某个基因来自训练时没有见过的物种，只要有它编码蛋白的氨基酸序列，就可以生成embedding。2、为gene embedding加入蛋白先验知识。3、小物种帮助更大：在小型消融模型中，protein embedding版本在除human之外的所有测试物种上都优于随机初始化版本（人类细胞训练预料多，而小物种训练细胞少）。
 - cell representation：压缩成四步：1.将蛋白编码gene分成表达和未表达两组；2.按log(x+1)权重从表达gene中有放回采样1,024次；3.按染色体分组、染色体内按基因组坐标排序并加入special tokens；4.在开头加入CLS，形成cell sentence并输入Transformer
@@ -32,5 +32,6 @@
 5. 结合cell embedding与gene protein embedding
 6. 预测候选gene是否表达，并使用二元交叉熵训练
 - loss function
-  cell embedding + CD3E embedding
+1. 拼接cell embedding + CD3E embedding
+2. 预测拼接gene是否表达
 ## 下游任务
